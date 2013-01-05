@@ -23,7 +23,7 @@ else
 endif
 
 " Set up gvim for UTF-8
-set guifont=Luxi\ Mono\ 10
+set guifont=Inconsolata-dz\ for\ Powerline
 set guifontwide=-misc-fixed-medium-r-normal-*-18-120-100-100-c-180-iso10646-1
 set guioptions-=T
 set encoding=utf-8
@@ -130,6 +130,9 @@ set laststatus=2
 " This gets overridden by powerline
 set statusline=%t\ %y\ [%{strlen(&fenc)?&fenc:'none'},\ %{&ff}]\ [%{&fo}]%=[%c,%l]\ %P\ 
 
+" Powerline setup
+let g:Powerline_symbols = 'fancy'
+
 " enable modelines
 set modeline
 set modelines=5
@@ -141,7 +144,6 @@ endif
 
 " Set terminal colours if things are misbehaving
 set t_Co=256
-"set t_Co=88
 
 " Shift-T for new tab
 map <S-T> <Esc>:tabnew<CR>
