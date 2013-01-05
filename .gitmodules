@@ -76,3 +76,6 @@
 [submodule "resources/vim/tagbar"]
 	path = resources/vim/tagbar
 	url = git://github.com/majutsushi/tagbar.git
+[submodule "resources/vim/Command-T"]
+	path = resources/vim/Command-T
+	url = git://github.com/wincent/Command-T.git
