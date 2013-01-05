@@ -1,0 +1,160 @@
+" Ensure we put the "im" in vim (should be first)
+set nocompatible
+
+filetype off
+call pathogen#infect()
+
+" Do I actually need this? Nothing makes sense anymore
+"call pathogen#helptags()
+
+" Syntax highlighting
+filetype plugin indent on
+
+syntax enable
+colorscheme solarized
+
+" I know this *seems* redundant, but I periodically change my
+if has('gui_running')
+"   preference on this...
+"   set background=light
+   set background=dark
+else
+   set background=dark
+endif
+
+" Set up gvim for UTF-8
+set guifont=Luxi\ Mono\ 10
+set guifontwide=-misc-fixed-medium-r-normal-*-18-120-100-100-c-180-iso10646-1
+set guioptions-=T
+set encoding=utf-8
+
+" Turn on line numbers
+set number
+
+" Keep a .viminfo file
+set viminfo='20,\"500
+
+" When editing a file, always jump to the last cursor position
+autocmd BufReadPost *
+    \ if line("'\"") > 0 && line ("'\"") <= line("$") |
+    \     exe "normal g'\"" |
+    \ endif
+
+" Tagbar
+nmap <F8> :TagbarToggle<CR>
+let g:tagbar_ctags_bin='/usr/local/bin/ctags'  " Proper Ctags locations
+"let g:tagbar_width=26                          " Default is 40, seems too wide
+"noremap <silent> <Leader>y :TagbarToggle       " Display panel with y (or ,y)"
+
+" change the mapleader from \ to ,
+" let mapleader=","
+
+" Quickly edit/reload the vimrc file
+"nmap <silent> <leader>ev :e $MYVIMRC<CR>
+"nmap <silent> <leader>sv :so $MYVIMRC<CR>
+
+" highlight end-of-line whitespace
+match Error /\s\+$/
+
+" magic opening
+map ,e :e <C-R>=expand("%:p:h")."/"<CR>
+
+"Move a line of text using control
+nmap <C-j> mz:m+<cr>`z
+nmap <C-k> mz:m-2<cr>`z
+"vmap <C-j> :m'>+<cr>`<my`>mzgv`yo`z
+"vmap <C-k> :m'<-2<cr>`>my`<mzgv`yo`z
+
+" Allow modified buffers that aren't visible
+set hidden
+
+" When a bracket is inserted, briefly jump to the matching one. The
+" jump is only done if the match can be seen on the screen.
+set showmatch
+
+" Allow fancy tag jumping (using %)
+source $VIMRUNTIME/macros/matchit.vim
+
+" Don't let the cursor get withing 4 lines of the top or bottom of the screen
+set scrolloff=4
+
+" make searches case-insensitive, unless they contain upper-case letters:
+set ignorecase
+set smartcase
+
+" incremental search (i.e. more the cursor as you type your search)
+set incsearch
+
+" Highlight search results
+set hlsearch
+
+" Don't move the cursor to the start of the line when you jump around
+" documents
+set nostartofline
+
+" Insert spaces when you press tab
+set expandtab
+
+" How wide are tabs?
+set tabstop=2
+
+" Number of spaces to use for each step of autoindent
+set shiftwidth=2
+
+" Allows you to backspace spaces like they were tabs (and other stuff I'm not
+" sure about)
+set autoindent
+set copyindent
+set smartindent
+set smarttab
+
+set title   " change the terminal title
+
+set history=1000         " remember more commands and search history
+set undolevels=1000      " use many muchos levels of undo 
+
+" Make the tab completion more bash-like
+set wildmode=longest,list
+
+set foldmethod=marker
+
+set tags=tags,../tags,../../tags,../../../tags,../../../../tags
+
+" Disable wrapping by default
+"set textwidth=0
+" Or not...
+set textwidth=78
+
+" Gimme some status
+set laststatus=2
+" This gets overridden by powerline
+set statusline=%t\ %y\ [%{strlen(&fenc)?&fenc:'none'},\ %{&ff}]\ [%{&fo}]%=[%c,%l]\ %P\ 
+
+" enable modelines
+set modeline
+set modelines=5
+
+" load my registers
+if filereadable('~/.vimregisters')
+    rviminfo! ~/.vimregisters
+endif
+
+" Set terminal colours if things are misbehaving
+set t_Co=256
+"set t_Co=88
+
+" Shift-T for new tab
+map <S-T> <Esc>:tabnew<CR>
+
+" Change the colour of the line numbers
+:highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+
+
+" ---------------------------------------------------------------------------
+" Strip all trailing whitespace in file
+" ---------------------------------------------------------------------------
+
+function! StripWhitespace ()
+    exec ':%s/ \+$//gc'
+endfunction
+map ,s :call StripWhitespace ()<CR>
