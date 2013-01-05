@@ -10,3 +10,69 @@
 [submodule "resources/vim/jslint"]
 	path = resources/vim/jslint
 	url = git://github.com/hallettj/jslint.vim.git
+[submodule "resources/vim/zencoding-vim"]
+	path = resources/vim/zencoding-vim
+	url = git://github.com/mattn/zencoding-vim.git
+[submodule "resources/vim/jslint.vim"]
+	path = resources/vim/jslint.vim
+	url = git://github.com/hallettj/jslint.vim.git
+[submodule "resources/vim/nerdtree"]
+	path = resources/vim/nerdtree
+	url = git://github.com/scrooloose/nerdtree.git
+[submodule "resources/vim/tabular"]
+	path = resources/vim/tabular
+	url = git://github.com/godlygeek/tabular.git
+[submodule "resources/vim/gmajutsushi/tagbar"]
+	path = resources/vim/gmajutsushi/tagbar
+	url = git://github.com/majutsushi/tagbar.git
+[submodule "resources/vim/tcomment_vim"]
+	path = resources/vim/tcomment_vim
+	url = git://github.com/tomtom/tcomment_vim.git
+[submodule "resources/vim/vim-coffee-script"]
+	path = resources/vim/vim-coffee-script
+	url = git://github.com/kchmck/vim-coffee-script.git
+[submodule "resources/vim/vim-easymotion"]
+	path = resources/vim/vim-easymotion
+	url = git://github.com/Lokaltog/vim-easymotion.git
+[submodule "resources/vim/vim-fugitive"]
+	path = resources/vim/vim-fugitive
+	url = git://github.com/tpope/vim-fugitive.git
+[submodule "resources/vim/vim-git"]
+	path = resources/vim/vim-git
+	url = git://github.com/tpope/vim-git.git
+[submodule "resources/vim/vim-haml"]
+	path = resources/vim/vim-haml
+	url = git://github.com/tpope/vim-haml.git
+[submodule "resources/vim/vim-javascript"]
+	path = resources/vim/vim-javascript
+	url = git://github.com/pangloss/vim-javascript.git
+[submodule "resources/vim/vim-markdown"]
+	path = resources/vim/vim-markdown
+	url = git://github.com/tpope/vim-markdown.git
+[submodule "resources/vim/vim-powerline"]
+	path = resources/vim/vim-powerline
+	url = git://github.com/Lokaltog/vim-powerline.git
+[submodule "resources/vim/vim-rails"]
+	path = resources/vim/vim-rails
+	url = git://github.com/tpope/vim-rails.git
+[submodule "resources/vim/vim-rspec"]
+	path = resources/vim/vim-rspec
+	url = git://github.com/skwp/vim-rspec.git
+[submodule "resources/vim/vim-ruby"]
+	path = resources/vim/vim-ruby
+	url = git://github.com/vim-ruby/vim-ruby.git
+[submodule "resources/vim/vim-smartinput"]
+	path = resources/vim/vim-smartinput
+	url = git://github.com/kana/vim-smartinput.git
+[submodule "resources/vim/mduem"]
+	path = resources/vim/mduem
+	url = git://github.com/kana/mduem.git
+[submodule "resources/vim/vim-snipmate"]
+	path = resources/vim/vim-snipmate
+	url = git://github.com/garbas/vim-snipmate.git
+[submodule "resources/vim/vim-surround"]
+	path = resources/vim/vim-surround
+	url = git://github.com/tpope/vim-surround.git
+[submodule "resources/vim/syntastic"]
+	path = resources/vim/syntastic
+	url = git://github.com/scrooloose/syntastic.git
