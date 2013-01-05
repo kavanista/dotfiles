@@ -1,0 +1,34 @@
+[user]
+  email = elliot.pahl@gmail.com
+  name = Elliot Pahl
+[push]
+  default = upstream
+[merge]
+  tool = opendiff
+[color]
+  status = auto
+  branch = auto
+  diff = auto
+  remote = auto
+  ui = auto
+[merge]
+  tool = vimdiff
+[core]
+  pager = less -FRSX
+  editor = /usr/bin/vim
+[alias]
+  ap = add -p
+  br = branch
+  bra = branch -a
+  c = commit
+  cam = commit --amend
+  cm = commit -m
+  co = checkout
+  d = diff
+  dc = diff --cached
+  ds = diff --staged
+  lp = log -p
+  lt = log --graph --oneline
+  s = status
+[credential]
+  helper = osxkeychain
