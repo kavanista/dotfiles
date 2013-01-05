@@ -1,0 +1,26 @@
+vbell off
+startup_message off
+defutf8 on
+defscrollback 1024
+nonblock on
+
+# hardstatusline
+hardstatus on
+hardstatus alwayslastline
+hardstatus string '%{= kG}%-Lw%{= kW}%50> %n%f* %t%{= kG}%+Lw%<'
+
+# Startup settings
+screen -t bash     0
+screen -t bash     1
+
+# Fix stupid screen overwriting
+altscreen on
+
+# escape key
+escape ``
+
+# from scrooloose on #vim
+attrcolor b ".I"
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm' 
+defbce "on"
+
