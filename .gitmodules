@@ -22,9 +22,6 @@
 [submodule "resources/vim/tabular"]
 	path = resources/vim/tabular
 	url = git://github.com/godlygeek/tabular.git
-[submodule "resources/vim/gmajutsushi/tagbar"]
-	path = resources/vim/gmajutsushi/tagbar
-	url = git://github.com/majutsushi/tagbar.git
 [submodule "resources/vim/tcomment_vim"]
 	path = resources/vim/tcomment_vim
 	url = git://github.com/tomtom/tcomment_vim.git
@@ -76,3 +73,6 @@
 [submodule "resources/vim/syntastic"]
 	path = resources/vim/syntastic
 	url = git://github.com/scrooloose/syntastic.git
+[submodule "resources/vim/tagbar"]
+	path = resources/vim/tagbar
+	url = git://github.com/majutsushi/tagbar.git
