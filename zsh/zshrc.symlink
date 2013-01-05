@@ -50,3 +50,4 @@ eval "$(hub alias -s)"
 export PATH="/usr/local/heroku/bin:$PATH"
 
 alias reload=". ~/.zshrc"
+alias diff="colordiff -u"
