@@ -40,9 +40,6 @@ if [[ -f $ZSH/oh-my-zsh.sh ]]; then
   source $ZSH/oh-my-zsh.sh
 fi
 
-# Customize to your needs...
-export PATH=/Users/epahl/.rvm/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin
-
 # Hub
 eval "$(hub alias -s)"
 
@@ -51,3 +48,33 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 alias reload=". ~/.zshrc"
 alias diff="colordiff -u"
+alias kel="knife ec2 server list"
+alias ked="knife ec2 server delete"
+alias b="nocorrect bundle exec"
+alias be="nocorrect bundle exec"
+alias bv="nocorrect bundle exec vagrant"
+alias ghi="nocorrect ghi"
+
+alias kct="knife cookbook test -o ../../cookbooks"
+alias flushdns='sudo dscacheutil -flushcache'
+
+alias knife="nocorrect knife"
+
+# GlobalProtect VPN
+alias vpn-off='sudo mv /Applications/GlobalProtect{,OFF}.app && pkill -9 -f GlobalProtect'
+alias vpn-on='sudo mv /Applications/GlobalProtect{OFF,}.app'
+
+export EDITOR="vim"
+
+# Git
+alias gfrd="git fetch && git reset --hard origin/develop"
+alias gfrp="git fetch && git reset --hard origin/production"
+
+# Humour
+alias ffs="sudo"
+
+# Don't correct the silver searcher
+alias ag="nocorrect ag"
+
+# Pretty print json
+alias json_pp="python -mjson.tool"
