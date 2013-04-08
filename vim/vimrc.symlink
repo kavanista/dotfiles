@@ -24,7 +24,8 @@ endif
 
 " Set up gvim for UTF-8
 set guifont=Inconsolata-dz\ for\ Powerline
-set guifontwide=-misc-fixed-medium-r-normal-*-18-120-100-100-c-180-iso10646-1
+set guifontwide=Inconsolata-dz\ for\ Powerline
+"set guifontwide=-misc-fixed-medium-r-normal-*-18-120-100-100-c-180-iso10646-1
 set guioptions-=T
 set encoding=utf-8
 
